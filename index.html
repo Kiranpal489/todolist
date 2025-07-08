@@ -99,8 +99,8 @@
             </div>
         </div>
     </nav>
-    <form class="form-color py-3 px-2 px-md-5">
-        <div class="container mb-3">
+    <form class="form-color">
+        <div class="container mt-5">
             <div class="float-start">
                 <button type="button" class="btn btn-color w-100 w-sm-auto" onclick="showtask()">Add Task</button>
             </div>
@@ -129,190 +129,190 @@
             </div>
         </div>
     </form>
-        <div class="modal fade" id="modal1" tabindex="-1">
-            <form id="addtaskform">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6 class="modal-title">Add Task</h6>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <form id="addtaskform">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">Add Task</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-1">
+                            <label for="addtask" class="form-label">Task</label>
+                            <br>
+                            <textarea class="form-control" id="inserttask" name="inserttask" rows="3" onblur="this.value=this.value.trim()" placeholder="Add your Task/description"></textarea>
                         </div>
-                        <div class="modal-body">
-                            <div class="mb-1">
-                                <label for="addtask" class="form-label">Task</label>
-                                <br>
-                                <textarea class="form-control" id="inserttask" name="inserttask" rows="3" onblur="this.value=this.value.trim()" placeholder="Add your Task/description"></textarea>
-                            </div>
-                            <div class="mb-1">
-                                <label class="form-label">Priority</label>
-                                <select class="form-control" name="priority" id="priority">
+                        <div class="mb-1">
+                            <label class="form-label">Priority</label>
+                            <select class="form-control" name="priority" id="priority">
                                 <option value="High">High</option>
                                 <option value="Medium" selected>Medium</option>
                                 <option value="Low">Low</option>
                                 </select>
-                            </div>
-                            <div class="mb-1">
-                                <label for="Responsible" class="form-label">Responsible</label>
-                                <br>
-                                <input type="text" class="form-control" id="addresponsible" name="addresponsible" placeholder="Add the Responsible person's name">
-                            </div>
-                            <div class="mb-1">
-                                <label for="datetime" class="form-label"></label>
-                                <br>
-                                <input type="datetime-local" class="form-control" id="date" name="date">
-                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-colour" onclick="Addtask()">Add Task</button>
+                        <div class="mb-1">
+                            <label for="Responsible" class="form-label">Responsible</label>
+                            <br>
+                            <input type="text" class="form-control" id="addresponsible" name="addresponsible" placeholder="Add the Responsible person's name">
+                        </div>
+                        <div class="mb-1">
+                            <label for="datetime" class="form-label"></label>
+                            <br>
+                            <input type="datetime-local" class="form-control" id="date" name="date">
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-colour" onclick="Addtask()">Add Task</button>
+                    </div>
                 </div>
-            </form>
-        </div>
-        <div class="modal fade" id="modal2" tabindex="-1">
-            <form id="edittaskform">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6 class="modal-title">Edit Task</h6>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+        </form>
+    </div>
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <form id="edittaskform">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">Edit Task</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-1">
+                            <label for="edittask" class="form-label">Task</label>
+                            <br>
+                            <textarea class="form-control" id="updatetask" name="inserttask" rows="3" placeholder="Add your Task/description"></textarea>
                         </div>
-                        <div class="modal-body">
-                            <div class="mb-1">
-                                <label for="edittask" class="form-label">Task</label>
-                                <br>
-                                <textarea class="form-control" id="updatetask" name="inserttask" rows="3" placeholder="Add your Task/description"></textarea>
-                            </div>
-                            <div class="mb-1">
-                                <label class="form-label">Priority</label>
-                                <select class="form-control" name="priority" id="editpriority">
+                        <div class="mb-1">
+                            <label class="form-label">Priority</label>
+                            <select class="form-control" name="priority" id="editpriority">
                                 <option value="High">High</option>
                                 <option value="Medium">Medium</option>
                                 <option value="Low">Low</option>
                                 </select>
-                            </div>
-                            <div class="mb-1">
-                                <label for="editResponsible" class="form-label">Responsible</label>
-                                <br>
-                                <input type="text" class="form-control" id="editresponsible" name="addresponsible" placeholder="Add the Responsible person's name">
-                            </div>
-                            <div class="mb-1">
-                                <label for="editdate" class="form-label"></label>
-                                <br>
-                                <input type="datetime-local" class="form-control" id="editdate" name="date">
-                            </div>
-                            <input type="hidden" id="editIndex" name="taskIndex">
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-colour" onclick="updateTask()">Add Task</button>
+                        <div class="mb-1">
+                            <label for="editResponsible" class="form-label">Responsible</label>
+                            <br>
+                            <input type="text" class="form-control" id="editresponsible" name="addresponsible" placeholder="Add the Responsible person's name">
                         </div>
+                        <div class="mb-1">
+                            <label for="editdate" class="form-label"></label>
+                            <br>
+                            <input type="datetime-local" class="form-control" id="editdate" name="date">
+                        </div>
+                        <input type="hidden" id="editIndex" name="taskIndex">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-colour" onclick="updateTask()">Add Task</button>
                     </div>
                 </div>
-            </form>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        createtablejson();
+
+        function showtask() {
+            $("#modal1").modal('show');
+        }
+
+        function Addtask() {
+            $("#modal1").modal('hide');
+            const taskDescription = $("#inserttask").val().trim();
+            const priority = $("#priority").val();
+            const responsible = $("#addresponsible").val().trim();
+            const date = $("#date").val();
+
+            // Validation
+            if (!taskDescription) {
+                alert("Task description is required.");
+                return;
+            }
+            if (!responsible) {
+                alert("Responsible person's name is required.");
+                return;
+            }
+            if (!date) {
+                alert("Due date/time is required.");
+                return;
+            }
+
+            const taskobject = {
+                inserttask: taskDescription,
+                priority: priority,
+                addresponsible: responsible,
+                date: date,
+                completed: false
+            };
+
+            let storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+            storageobjectArr.push(taskobject);
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
             createtablejson();
-
-            function showtask() {
-                $("#modal1").modal('show');
+            $("#addtaskform").trigger('reset');
+        }
+        /* $("#modal1").modal('hide');
+            var dataArr = $("#addtaskform").serializeArray();
+            console.log(dataArr);
+            var taskobject = new Object();
+            var storageobjectArr = [];
+            var storageobject = localStorage.getItem('taskStorage');
+            for (var i in dataArr) {
+                var name = dataArr[i]['name'];
+                var value = dataArr[i]['value'].trim();
+                taskobject[name] = value;
             }
-
-            function Addtask() {
-                $("#modal1").modal('hide');
-                const taskDescription = $("#inserttask").val().trim();
-                const priority = $("#priority").val();
-                const responsible = $("#addresponsible").val().trim();
-                const date = $("#date").val();
-
-                // Validation
-                if (!taskDescription) {
-                    alert("Task description is required.");
-                    return;
-                }
-                if (!responsible) {
-                    alert("Responsible person's name is required.");
-                    return;
-                }
-                if (!date) {
-                    alert("Due date/time is required.");
-                    return;
-                }
-
-                const taskobject = {
-                    inserttask: taskDescription,
-                    priority: priority,
-                    addresponsible: responsible,
-                    date: date,
-                    completed: false
-                };
-
-                let storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+            taskobject['completed'] = false;
+            //console.log(taskobject);
+            if (storageobject != null && storageobject != undefined && storageobject != '') {
+                storageobjectArr = JSON.parse(storageobject);
                 storageobjectArr.push(taskobject);
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson();
-                $("#addtaskform").trigger('reset');
+            } else {
+                storageobjectArr.push(taskobject);
             }
-            /* $("#modal1").modal('hide');
-                var dataArr = $("#addtaskform").serializeArray();
-                console.log(dataArr);
-                var taskobject = new Object();
-                var storageobjectArr = [];
-                var storageobject = localStorage.getItem('taskStorage');
-                for (var i in dataArr) {
-                    var name = dataArr[i]['name'];
-                    var value = dataArr[i]['value'].trim();
-                    taskobject[name] = value;
-                }
-                taskobject['completed'] = false;
-                //console.log(taskobject);
-                if (storageobject != null && storageobject != undefined && storageobject != '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                    storageobjectArr.push(taskobject);
-                } else {
-                    storageobjectArr.push(taskobject);
-                }
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson(); // it is used when we have to add more records in table so this function is called
-                $("#addtaskform").trigger('reset');*/
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson(); // it is used when we have to add more records in table so this function is called
+            $("#addtaskform").trigger('reset');*/
 
-            function createtablejson() {
-                var storageobjectArr = [];
-                var storageobject = localStorage.getItem('taskStorage');
-                var html = "";
+        function createtablejson() {
+            var storageobjectArr = [];
+            var storageobject = localStorage.getItem('taskStorage');
+            var html = "";
 
-                if (storageobject != null && storageobject != undefined && storageobject != '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                }
+            if (storageobject != null && storageobject != undefined && storageobject != '') {
+                storageobjectArr = JSON.parse(storageobject);
+            }
 
-                if (storageobjectArr && storageobjectArr.length > 0) {
-                    for (let i in storageobjectArr) {
-                        const task = storageobjectArr[i];
-                        const isChecked = task.completed ? 'checked' : '';
-                        const date = new Date(task.date);
-                        const now = new Date();
-                        let rowClass = "";
+            if (storageobjectArr && storageobjectArr.length > 0) {
+                for (let i in storageobjectArr) {
+                    const task = storageobjectArr[i];
+                    const isChecked = task.completed ? 'checked' : '';
+                    const date = new Date(task.date);
+                    const now = new Date();
+                    let rowClass = "";
 
-                        if (!task.completed && !isNaN(date)) {
-                            if (date < now) rowClass = "overdue";
-                            else if ((date - now) < (24 * 60 * 60 * 1000)) rowClass = "due-soon";
-                        }
+                    if (!task.completed && !isNaN(date)) {
+                        if (date < now) rowClass = "overdue";
+                        else if ((date - now) < (24 * 60 * 60 * 1000)) rowClass = "due-soon";
+                    }
 
-                        const textClass = task.completed ? 'text-decoration-line-through text-muted' : '';
+                    const textClass = task.completed ? 'text-decoration-line-through text-muted' : '';
 
-                        let priorityBadge = '';
-                        if (task.priority === "High") {
-                            priorityBadge = '<span class="badge badge-high">High</span>';
-                        } else if (task.priority === "Medium") {
-                            priorityBadge = '<span class="badge badge-medium">Medium</span>';
-                        } else {
-                            priorityBadge = '<span class="badge badge-low">Low</span>';
-                        }
+                    let priorityBadge = '';
+                    if (task.priority === "High") {
+                        priorityBadge = '<span class="badge badge-high">High</span>';
+                    } else if (task.priority === "Medium") {
+                        priorityBadge = '<span class="badge badge-medium">Medium</span>';
+                    } else {
+                        priorityBadge = '<span class="badge badge-low">Low</span>';
+                    }
 
-                        html += `<tr class="${rowClass}">
+                    html += `<tr class="${rowClass}">
                 <td><input type="checkbox" onclick="toggleComplete(${i})" ${isChecked}></td>
                 <td class="${textClass}">${task.inserttask} ${priorityBadge}</td>
                 <td class="${textClass}">${task.addresponsible}</td>
@@ -322,177 +322,177 @@
                     <i class="bi bi-pencil-square" onclick="editTask(${i})"></i>
                 </td>
             </tr>`;
-                    }
-                } else {
-                    html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
                 }
-
-                $("#tablebody").html(html);
+            } else {
+                html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
             }
-            /*var storageobjectArr = [];
-                var storageobject = sessionStorage.getItem('taskStorage');
-                var html = "";
-                if (storageobject != null && storageobject != undefined && storageobject != '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                }
-                if (storageobjectArr && storageobjectArr.length > 0) {
-                    for (let i in storageobjectArr) {
-                        var task = storageobjectArr[i];
-                        var isChecked = task.completed ? 'checked' : '';
-                        var date = new Date(task.date);
-                        var textClass = task.completed ? 'text-decoration-line-through text-muted' : '';
-                        html += '<tr>' +
-                            '<td><input type="checkbox" onclick="toggleComplete(' + i + ')" ' + isChecked + '></td>' +
-                            '<td class="' + textClass + '">' + task.inserttask + '</td>' +
-                            '<td class="' + textClass + '">' + task.addresponsible + '</td>' +
-                            '<td class="' + textClass + '">' + (isNaN(date) ? 'Invalid Date' : date.toUTCString()) + '</td>' +
-                            '<td>' +
-                            '<i class="bi bi-check-circle-fill" onclick="removetask(' + i + ')"></i> ' +
-                            '<i class="bi bi-pencil-square" onclick="edittask(' + i + ')"></i>' +
-                            '</td>' +
-                            '</tr>';
-                    }
-                } else {
-                    html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
-                }
-                $("#tablebody").html(html);
-            }*/
 
-            /*for (let i in storageobjectArr) {
-                        var date = new Date(storageobjectArr[i]['date'])
-                        html += '<tr>' +
-                            '<td>' + (parseInt(i) + 1) + '</td>' +
-                            '<td>' + storageobjectArr[i]['inserttask'] + '</td>' +
-                            '<td>' + storageobjectArr[i]['addresponsible'] + '</td>' +
-                            '<td>' + date.toUTCString() + '</td>' +
-                            '<td><i class="bi bi-check-circle-fill" onclick="removetask(' + i + ')"></i><i class="bi bi-pencil-square" onclick= "edittask(' + i + ')"></i></td>' + '</tr>';
-                    }
-                } else {
-                    html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
+            $("#tablebody").html(html);
+        }
+        /*var storageobjectArr = [];
+            var storageobject = sessionStorage.getItem('taskStorage');
+            var html = "";
+            if (storageobject != null && storageobject != undefined && storageobject != '') {
+                storageobjectArr = JSON.parse(storageobject);
+            }
+            if (storageobjectArr && storageobjectArr.length > 0) {
+                for (let i in storageobjectArr) {
+                    var task = storageobjectArr[i];
+                    var isChecked = task.completed ? 'checked' : '';
+                    var date = new Date(task.date);
+                    var textClass = task.completed ? 'text-decoration-line-through text-muted' : '';
+                    html += '<tr>' +
+                        '<td><input type="checkbox" onclick="toggleComplete(' + i + ')" ' + isChecked + '></td>' +
+                        '<td class="' + textClass + '">' + task.inserttask + '</td>' +
+                        '<td class="' + textClass + '">' + task.addresponsible + '</td>' +
+                        '<td class="' + textClass + '">' + (isNaN(date) ? 'Invalid Date' : date.toUTCString()) + '</td>' +
+                        '<td>' +
+                        '<i class="bi bi-check-circle-fill" onclick="removetask(' + i + ')"></i> ' +
+                        '<i class="bi bi-pencil-square" onclick="edittask(' + i + ')"></i>' +
+                        '</td>' +
+                        '</tr>';
                 }
-                $("#tablebody").html(html);
-            }*/
+            } else {
+                html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
+            }
+            $("#tablebody").html(html);
+        }*/
 
-            function removetask(index) {
-                var storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+        /*for (let i in storageobjectArr) {
+                    var date = new Date(storageobjectArr[i]['date'])
+                    html += '<tr>' +
+                        '<td>' + (parseInt(i) + 1) + '</td>' +
+                        '<td>' + storageobjectArr[i]['inserttask'] + '</td>' +
+                        '<td>' + storageobjectArr[i]['addresponsible'] + '</td>' +
+                        '<td>' + date.toUTCString() + '</td>' +
+                        '<td><i class="bi bi-check-circle-fill" onclick="removetask(' + i + ')"></i><i class="bi bi-pencil-square" onclick= "edittask(' + i + ')"></i></td>' + '</tr>';
+                }
+            } else {
+                html = '<tr><td colspan="5">No Tasks Are Added</td></tr>';
+            }
+            $("#tablebody").html(html);
+        }*/
+
+        function removetask(index) {
+            var storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+            storageobjectArr.splice(index, 1);
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson();
+        }
+        /*console.log(index);
+            storageobjectArr = [];
+            storageobject = sessionStorage.getItem('taskStorage');
+            if (storageobject != null && storageobject != undefined && storageobject != '') {
+                storageobjectArr = JSON.parse(storageobject);
                 storageobjectArr.splice(index, 1);
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson();
             }
-            /*console.log(index);
-                storageobjectArr = [];
-                storageobject = sessionStorage.getItem('taskStorage');
-                if (storageobject != null && storageobject != undefined && storageobject != '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                    storageobjectArr.splice(index, 1);
-                }
-                sessionStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson();
-            }*/
+            sessionStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson();
+        }*/
 
-            function editTask(index) {
-                var storageobject = localStorage.getItem('taskStorage');
-                var storageobjectArr = [];
-                if (storageobject != null && storageobject != undefined && storageobject !== '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                    var task = storageobjectArr[index]; // ✅ Define task
-                    $("#updatetask").val(task.inserttask);
-                    $("#editresponsible").val(task.addresponsible);
-                    $("#editdate").val(task.date);
-                    $("#editpriority").val(task.priority); // ✅ Now this works
-                    $("#editIndex").val(index);
-                    $("#modal2").modal('show');
-                }
-            }
-
-            /* var storageobjectArr = JSON.parse(sessionStorage.getItem('taskStorage') || "[]");
-                var task = storageobjectArr[index];
+        function editTask(index) {
+            var storageobject = localStorage.getItem('taskStorage');
+            var storageobjectArr = [];
+            if (storageobject != null && storageobject != undefined && storageobject !== '') {
+                storageobjectArr = JSON.parse(storageobject);
+                var task = storageobjectArr[index]; // ✅ Define task
                 $("#updatetask").val(task.inserttask);
                 $("#editresponsible").val(task.addresponsible);
                 $("#editdate").val(task.date);
-                $("#editpriority").val(task.priority); // FIX: define task first
+                $("#editpriority").val(task.priority); // ✅ Now this works
                 $("#editIndex").val(index);
                 $("#modal2").modal('show');
-            }*/
-
-
-            /* function updateTask() {
-                 $("#modal2").modal('hide');
-                 var dataArr = $("#edittaskform").serializeArray();
-                 var taskobject = {};
-                 var storageobjectArr = [];
-                 var storageobject = sessionStorage.getItem('taskStorage');
-
-                 for (var i in dataArr) {
-                     var name = dataArr[i]['name'];
-                     var value = dataArr[i]['value'];
-                     taskobject[name] = value;
-                 }
-
-                 var index = parseInt(taskobject['taskIndex']);
-
-                 if (storageobject != null && storageobject != undefined && storageobject !== '') {
-                     storageobjectArr = JSON.parse(storageobject);
-
-                     // 🧠 Keep the previous completed state
-                     taskobject['completed'] = storageobjectArr[index]['completed'] || false;
-
-                     // ✅ Replace old task with updated one
-                     storageobjectArr[index] = taskobject;
-                 }
-
-                 sessionStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                 createtablejson();
-                 $("#edittaskform").trigger('reset');
-             }*/
-            function updateTask() {
-                $("#modal2").modal('hide');
-                var dataArr = $("#edittaskform").serializeArray();
-                var taskobject = new Object();
-                var storageobjectArr = [];
-                var storageobject = localStorage.getItem('taskStorage');
-                for (var i in dataArr) {
-                    var name = dataArr[i]['name'];
-                    var value = dataArr[i]['value'];
-                    taskobject[name] = value;
-                }
-                //console.log(taskobject);
-                var index = parseInt(taskobject['taskIndex']);
-                if (storageobject != null && storageobject != undefined && storageobject != '') {
-                    storageobjectArr = JSON.parse(storageobject);
-                    taskobject['completed'] = storageobjectArr[index]['completed'] || false;
-                    storageobjectArr[index] = taskobject;
-                    //storageobjectArr[taskobject['taskIndex']] = taskobject;
-                }
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson(); // it is used when we have to add more records in table so this function is called
-                $("#edittaskform").trigger('reset');
             }
-            /*$("#modal2").modal('hide');
-                const taskDescription = $("#updatetask").val().trim();
-                const priority = $("#priority").val();
-                const responsible = $("#editresponsible").val().trim();
-                const date = $("#editdate").val();
-                const taskobject = {
-                    updatetask: taskDescription,
-                    priority: priority,
-                    addresponsible: responsible,
-                    date: date,
-                    completed: false
-                };
-                let storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
-                storageobjectArr.push(taskobject);
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson();
-                $("#addtaskform").trigger('reset');
-            }*/
-            function toggleComplete(index) {
-                var storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
-                storageobjectArr[index].completed = !storageobjectArr[index].completed;
-                localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
-                createtablejson();
+        }
+
+        /* var storageobjectArr = JSON.parse(sessionStorage.getItem('taskStorage') || "[]");
+            var task = storageobjectArr[index];
+            $("#updatetask").val(task.inserttask);
+            $("#editresponsible").val(task.addresponsible);
+            $("#editdate").val(task.date);
+            $("#editpriority").val(task.priority); // FIX: define task first
+            $("#editIndex").val(index);
+            $("#modal2").modal('show');
+        }*/
+
+
+        /* function updateTask() {
+             $("#modal2").modal('hide');
+             var dataArr = $("#edittaskform").serializeArray();
+             var taskobject = {};
+             var storageobjectArr = [];
+             var storageobject = sessionStorage.getItem('taskStorage');
+
+             for (var i in dataArr) {
+                 var name = dataArr[i]['name'];
+                 var value = dataArr[i]['value'];
+                 taskobject[name] = value;
+             }
+
+             var index = parseInt(taskobject['taskIndex']);
+
+             if (storageobject != null && storageobject != undefined && storageobject !== '') {
+                 storageobjectArr = JSON.parse(storageobject);
+
+                 // 🧠 Keep the previous completed state
+                 taskobject['completed'] = storageobjectArr[index]['completed'] || false;
+
+                 // ✅ Replace old task with updated one
+                 storageobjectArr[index] = taskobject;
+             }
+
+             sessionStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+             createtablejson();
+             $("#edittaskform").trigger('reset');
+         }*/
+        function updateTask() {
+            $("#modal2").modal('hide');
+            var dataArr = $("#edittaskform").serializeArray();
+            var taskobject = new Object();
+            var storageobjectArr = [];
+            var storageobject = localStorage.getItem('taskStorage');
+            for (var i in dataArr) {
+                var name = dataArr[i]['name'];
+                var value = dataArr[i]['value'];
+                taskobject[name] = value;
             }
-        </script>
+            //console.log(taskobject);
+            var index = parseInt(taskobject['taskIndex']);
+            if (storageobject != null && storageobject != undefined && storageobject != '') {
+                storageobjectArr = JSON.parse(storageobject);
+                taskobject['completed'] = storageobjectArr[index]['completed'] || false;
+                storageobjectArr[index] = taskobject;
+                //storageobjectArr[taskobject['taskIndex']] = taskobject;
+            }
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson(); // it is used when we have to add more records in table so this function is called
+            $("#edittaskform").trigger('reset');
+        }
+        /*$("#modal2").modal('hide');
+            const taskDescription = $("#updatetask").val().trim();
+            const priority = $("#priority").val();
+            const responsible = $("#editresponsible").val().trim();
+            const date = $("#editdate").val();
+            const taskobject = {
+                updatetask: taskDescription,
+                priority: priority,
+                addresponsible: responsible,
+                date: date,
+                completed: false
+            };
+            let storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+            storageobjectArr.push(taskobject);
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson();
+            $("#addtaskform").trigger('reset');
+        }*/
+        function toggleComplete(index) {
+            var storageobjectArr = JSON.parse(localStorage.getItem('taskStorage') || "[]");
+            storageobjectArr[index].completed = !storageobjectArr[index].completed;
+            localStorage.setItem('taskStorage', JSON.stringify(storageobjectArr));
+            createtablejson();
+        }
+    </script>
 </body>
 
 </html>
